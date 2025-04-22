@@ -3,7 +3,7 @@
 # by all of the numbers from 1 to 20?
 
 status = False
-for num in range (2520,9144576001,10):
+for num in range (2520,9144576001,2520):
     for i in range(2,21):
         if num % i == 0:
             status = True
