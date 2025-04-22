@@ -99,7 +99,7 @@ def recursion_n_n(n, x, y):
         yield []
     else:
         for i in range(x,y, -1):
-            for tail in recursion(n-1,x, y):
+            for tail in recursion_n_n(n-1,x, y):
                 yield [i] + tail
 
 
