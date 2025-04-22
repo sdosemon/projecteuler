@@ -21,33 +21,44 @@
 # print(f"{a}*{b} = {largest_palindrome}")
 
 # product of 2, n-digit numbers:
-def largest_palindrome(digit_numbers: int):
-    if not digit_numbers:
-        return "You are silly!"
+# def largest_palindrome(digit_numbers: int):
+#     if not digit_numbers:
+#         return "You are silly!"
 
-    largest_palindrome = -1
-    if digit_numbers == 1:
-        max_value = 9
-        min_value = 0
-    else:
-        max_value = int("9"*digit_numbers)
-        min_value = int("9"*(digit_numbers-1))
+#     largest_palindrome = -1
+#     if digit_numbers == 1:
+#         max_value = 9
+#         min_value = 0
+#     else:
+#         max_value = int("9"*digit_numbers)
+#         min_value = int("9"*(digit_numbers-1))
         
-    for x in range(max_value,min_value,-1):
-        for i in range (x,min_value,-1):
+#     for x in range(max_value,min_value,-1):
+#         for i in range (x,min_value,-1):
+#             if str(x*i) == str(x*i)[::-1]:
+#                 current_palindrome = x*i
+#                 if largest_palindrome < current_palindrome:
+#                     largest_palindrome = current_palindrome
+#                     a = x
+#                     b = i
+#     return (f"{a}*{b} = {largest_palindrome}")
+
+# print(largest_palindrome(0))
+# print(largest_palindrome(1))
+# print(largest_palindrome(2))
+# print(largest_palindrome(3))
+
+# product of n, 2-digit numbers:
+
+def largest_palindrome(products: int):
+    largest_palindrome = -1
+    for x in range(99,9,-1):
+        for i in range (x,9,-1):
             if str(x*i) == str(x*i)[::-1]:
                 current_palindrome = x*i
                 if largest_palindrome < current_palindrome:
                     largest_palindrome = current_palindrome
                     a = x
                     b = i
-    return (f"{a}*{b} = {largest_palindrome}")
-
-print(largest_palindrome(0))
-print(largest_palindrome(1))
-print(largest_palindrome(2))
-print(largest_palindrome(3))
-
-#TEST TEST
 
 
