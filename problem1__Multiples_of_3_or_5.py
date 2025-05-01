@@ -2,7 +2,8 @@
 #The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
 
 def multiples_of_3n5(max_number):
-    '''
+    ''' Accepts an integer value 'max_number' which is the upper bound of the numbers checked. 
+    Return the sum of all the multiples of 3 or 5 below 'max_number'.
     '''
 
     lst = []
